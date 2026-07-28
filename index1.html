@@ -1390,17 +1390,17 @@ let lbxPhotos = [], lbxIdx = 0, lbxReport = null;
 (function authGuard(){
   try{
     const raw = sessionStorage.getItem('vbUser');
-    if(!raw){ window.location.href='login-viva.html'; return; }
+    if(!raw){ window.location.href='login-P10.html'; return; }
     const user = JSON.parse(raw);
     if(!user || String(user.role||'').trim().toLowerCase()!=='vb'){
       sessionStorage.removeItem('vbUser');
-      window.location.href='login-viva.html'; return;
+      window.location.href='login-P10.html'; return;
     }
     document.getElementById('userPillName').textContent = user.username || 'Viva Aerobus';
-  }catch(e){ window.location.href='login-viva.html'; }
+  }catch(e){ window.location.href='login-P10.html'; }
 })();
 function logout(){
-  if(confirm('¿Cerrar sesión?')){ sessionStorage.removeItem('vbUser'); window.location.href='login-viva.html'; }
+  if(confirm('¿Cerrar sesión?')){ sessionStorage.removeItem('vbUser'); window.location.href='login-P10.html'; }
 }
 
 // ══ SCROLL PLANE ANIMATION ══
